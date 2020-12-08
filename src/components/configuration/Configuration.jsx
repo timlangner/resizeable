@@ -4,7 +4,11 @@ import {Checkbox, Input} from "chayns-components";
 
 const Configuration = ({currentHeight}) => {
 
-    const [mobileHeight, setMobileHeight] = useState(currentHeight / 3);
+    const [mobileHeight, setMobileHeight] = useState();
+
+    useEffect(() => {
+        setMobileHeight((currentHeight / 3).toFixed(0));
+    }, [currentHeight]);
 
     return (
         <div className="container">
@@ -26,7 +30,7 @@ const Configuration = ({currentHeight}) => {
                     design={1}
                     dynamic={1}
                     placeholder="Pixel"
-                    defaultValue="15"
+                    value={mobileHeight}
                     disabled
                 />
             </div>
