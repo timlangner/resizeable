@@ -28,6 +28,11 @@
         "tabWidth": 4
     },
     "dependencies": {
+        "@fortawesome/fontawesome-pro": "^5.15.1",
+        "@fortawesome/fontawesome-svg-core": "^1.2.32",
+        "@fortawesome/free-solid-svg-icons": "^5.15.1",
+        "@fortawesome/pro-light-svg-icons": "^5.15.1",
+        "@fortawesome/react-fontawesome": "^0.1.13",
         "@hot-loader/react-dom": "^16.13.0",
         "@reduxjs/toolkit": "^1.4.0",
         "bowser": "^2.9.0",
