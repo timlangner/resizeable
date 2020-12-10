@@ -14,7 +14,7 @@ const Container = () => {
                 <div ref={ref} style={{height: '100%'}} />
             </ResizePanel>
             <br />
-            <Configuration currentHeight={height} setContainerHeight={setContainerHeight} />
+            <Configuration currentHeight={height} />
         </>
     );
 };
