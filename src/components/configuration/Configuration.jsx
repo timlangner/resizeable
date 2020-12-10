@@ -1,19 +1,24 @@
 import React, { useState, useEffect } from "react";
-import './configuration.scss';
 import {Checkbox, Input} from "chayns-components";
+import './configuration.scss';
 
 const Configuration = ({currentHeight, setContainerHeight}) => {
 
     const [desktopHeight, setDesktopHeight] = useState(0)
     const [mobileHeight, setMobileHeight] = useState(0);
+    const [isFixed, setIsFixed] = useState(false);
 
     useEffect(() => {
         setDesktopHeight(currentHeight);
-        setMobileHeight((currentHeight / 3).toFixed(0));
+        if (!isFixed) {
+            setMobileHeight((currentHeight / 3).toFixed(0));
+        }
     }, [currentHeight]);
 
     useEffect(() => {
-        setMobileHeight((desktopHeight / 3).toFixed(0));
+        if (!isFixed) {
+            setMobileHeight((desktopHeight / 3).toFixed(0));
+        }
     }, [desktopHeight]);
 
     return (
@@ -27,7 +32,6 @@ const Configuration = ({currentHeight, setContainerHeight}) => {
                     placeholder="Pixel"
                     value={desktopHeight}
                     onChange={(value) => {
-                        console.log(value);
                         setDesktopHeight(value);
                         setContainerHeight(value);
                     }}
@@ -37,12 +41,15 @@ const Configuration = ({currentHeight, setContainerHeight}) => {
             <div className="input-wrapper">
                 <p>Mobil</p>
                 <Input
-                    className="input--desktop"
+                    className={isFixed ? 'input--desktop' : 'input--desktop input--mobile'}
                     design={1}
                     dynamic={1}
                     placeholder="Pixel"
                     value={mobileHeight}
-                    disabled
+                    onChange={(value) => {
+                        setMobileHeight(value);
+                        setIsFixed(true);
+                    }}
                 />
             </div>
             <div style={{ marginTop: '10px' }} />
