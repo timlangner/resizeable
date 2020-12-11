@@ -18,7 +18,9 @@ const Container = () => {
                 <ResizePanel direction='s' handleClass="customHandle" style={{ height: containerHeight, border: '1px solid darkgrey' }}>
                     <div ref={ref} style={{height: '100%', display: 'flex', justifyContent: 'center'}} >
                         <div style={height <= 120 ? { display: 'none' } : null}>
-                            <Configuration currentHeight={height} position={"inside"} />
+                            <div style={{ marginTop: `${height - 145}px` }}>
+                                <Configuration currentHeight={height} position={"inside"} />
+                            </div>
                         </div>
                     </div>
                 </ResizePanel>

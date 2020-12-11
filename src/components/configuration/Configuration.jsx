@@ -27,7 +27,9 @@ const Configuration = ({currentHeight, position}) => {
     }, [mobileHeight]);
 
     return (
-        <div className={chayns.env.isMobile && position === "inside" ? 'container-inside--mobile' : chayns.env.isMobile ? 'container--mobile' : chayns.env.isDesktop && position === "inside" ? 'container-inside' : 'container'}>
+        <div
+            className={chayns.env.isMobile && position === "inside" ? 'container-inside--mobile' : chayns.env.isMobile ? 'container--mobile' : chayns.env.isDesktop && position === "inside" ? 'container-inside' : 'container'}
+        >
             <div className="wrapper">
                 <div>
                     <div className="input-wrapper">
