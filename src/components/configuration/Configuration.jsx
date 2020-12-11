@@ -83,8 +83,6 @@ const Configuration = ({currentHeight}) => {
                     </div>
                 </div>
             </div>
-            <div style={{ marginTop: '10px' }} />
-            <Checkbox label="Als Standard festlegen" />
         </div>
     );
 };
