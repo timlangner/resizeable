@@ -69,7 +69,7 @@ const Configuration = ({currentHeight}) => {
                     </div>
                     <div
                         className="icon"
-                        style={isLocked ? { color: '#696969' } : { color: 'darkgrey' }}
+                        style={isLocked ? { color: '#818181' } : { color: 'darkgrey' }}
                         onClick={() => {
                             console.log('onClick', typeof desktopHeight);
                             setIsLocked(!isLocked);
