@@ -8,26 +8,21 @@ import './container.scss';
 const Container = () => {
     const { ref, height } = useResizeObserver();
     const [containerHeight, setContainerHeight] = useState(200);
-    const [showToolbar, setShowToolbar] = useState(false);
-    const [showConfig, setShowConfig] = useState(false);
 
     return (
         <>
             <div
-                onMouseEnter={() => setShowToolbar(true)}
-                onMouseLeave={() => setShowToolbar(false)}
                 style={{ height: '100%' }}
             >
-                <div style={showToolbar ? { display: 'block' } : { display: 'block' }} >
-                    <Toolbar showConfig={showConfig} setShowConfig={setShowConfig} />
-                </div>
+                <Toolbar />
                 <ResizePanel direction='s' handleClass="customHandle" style={{ height: containerHeight, border: '1px solid darkgrey' }}>
-                    <div ref={ref} style={{height: '100%'}} >
-                        <div style={showConfig ? { display: 'block' } : { display: 'none' }}>
-                            <Configuration currentHeight={height} />
-                        </div>
+                    <div ref={ref} style={{height: '100%', display: 'flex', justifyContent: 'center'}} >
+                        {/*<Configuration currentHeight={height} />*/}
                     </div>
                 </ResizePanel>
+                <div className="config--wrapper">
+                    <Configuration currentHeight={height} />
+                </div>
             </div>
             <br />
         </>
