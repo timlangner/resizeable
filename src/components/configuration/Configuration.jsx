@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLock, faUnlock } from "@fortawesome/free-solid-svg-icons";
 import './configuration.scss';
 
-const Configuration = ({currentHeight}) => {
+const Configuration = ({currentHeight, position}) => {
 
     const [desktopHeight, setDesktopHeight] = useState(0);
     const [mobileHeight, setMobileHeight] = useState(0);
@@ -27,7 +27,7 @@ const Configuration = ({currentHeight}) => {
     }, [mobileHeight]);
 
     return (
-        <div className={chayns.env.isMobile ? 'container--mobile' : 'container'}>
+        <div className={chayns.env.isMobile && position === "inside" ? 'container-inside--mobile' : chayns.env.isMobile ? 'container--mobile' : chayns.env.isDesktop && position === "inside" ? 'container-inside' : 'container'}>
             <div className="wrapper">
                 <div>
                     <div className="input-wrapper">
@@ -71,7 +71,6 @@ const Configuration = ({currentHeight}) => {
                         className="icon"
                         style={isLocked ? { color: '#818181' } : { color: 'darkgrey' }}
                         onClick={() => {
-                            console.log('onClick', typeof desktopHeight);
                             setIsLocked(!isLocked);
                         }}
                     >

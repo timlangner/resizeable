@@ -17,10 +17,12 @@ const Container = () => {
                 <Toolbar />
                 <ResizePanel direction='s' handleClass="customHandle" style={{ height: containerHeight, border: '1px solid darkgrey' }}>
                     <div ref={ref} style={{height: '100%', display: 'flex', justifyContent: 'center'}} >
-                        {/*<Configuration currentHeight={height} />*/}
+                        <div style={height < 120 ? { display: 'none' } : null}>
+                            <Configuration currentHeight={height} position={"inside"} />
+                        </div>
                     </div>
                 </ResizePanel>
-                <div className="config--wrapper">
+                <div className="config--wrapper" style={height > 120 ? { display: 'none' } : null}>
                     <Configuration currentHeight={height} />
                 </div>
             </div>
