@@ -17,7 +17,7 @@ const Container = () => {
                 <Toolbar />
                 <ResizePanel direction='s' handleClass="customHandle" style={{ height: containerHeight, border: '1px solid darkgrey' }}>
                     <div ref={ref} style={{height: '100%', display: 'flex', justifyContent: 'center'}} >
-                        <div style={height < 120 ? { display: 'none' } : null}>
+                        <div style={height <= 120 ? { display: 'none' } : null}>
                             <Configuration currentHeight={height} position={"inside"} />
                         </div>
                     </div>
