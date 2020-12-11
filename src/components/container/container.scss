@@ -3,4 +3,16 @@
   height: 15px;
   background-color: #0F7CC5;
   border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:after {
+    content:'';
+    height: 5px;
+    width: 22px;
+    border-width: 1px 0 1px 0;
+    border-color: rgba(255, 255, 255, .5);
+    border-style: solid;
+  }
 }
