@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import ResizePanel from "react-resize-panel";
 import useResizeObserver from "use-resize-observer";
 import Configuration from "../configuration/Configuration";
@@ -7,8 +7,9 @@ import './container.scss';
 
 const Container = () => {
     const { ref, height } = useResizeObserver();
-    const [containerHeight, setContainerHeight] = useState(150);
+    const [containerHeight, setContainerHeight] = useState(200);
     const [showToolbar, setShowToolbar] = useState(false);
+    const [showConfig, setShowConfig] = useState(false);
 
     return (
         <>
@@ -16,13 +17,18 @@ const Container = () => {
                 onMouseEnter={() => setShowToolbar(true)}
                 onMouseLeave={() => setShowToolbar(false)}
             >
-                <Toolbar style={showToolbar ? { display: 'none' } : { display: 'none' }} />
+                <div style={showToolbar ? { display: 'block' } : { display: 'block' }} >
+                    <Toolbar showConfig={showConfig} setShowConfig={setShowConfig} />
+                </div>
                 <ResizePanel direction='s' handleClass="customHandle" style={{ height: containerHeight, border: '1px solid darkgrey' }}>
-                    <div ref={ref} style={{height: '100%'}} />
+                    <div ref={ref} style={{height: '100%'}} >
+                        <div style={showConfig ? { display: 'block' } : { display: 'none' }}>
+                            <Configuration currentHeight={height} />
+                        </div>
+                    </div>
                 </ResizePanel>
             </div>
             <br />
-            <Configuration currentHeight={height} />
         </>
     );
 };

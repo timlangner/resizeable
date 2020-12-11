@@ -3,63 +3,77 @@
   height: 150px;
   background-color: white;
   padding: 10px;
-  box-shadow: 0px 0px 10px 3px #b0b0b0;
+  box-shadow: 0px 0px 8px 1px #b0b0b0;
+  position: absolute;
+  top: 85px;
+  left: 55px;
+}
 
-  .wrapper {
+.container--mobile {
+  width: 250px;
+  height: 150px;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0px 0px 8px 1px #b0b0b0;
+  position: absolute;
+  top: 65px;
+  left: 20px;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+
+  .input-wrapper {
     display: flex;
-    align-items: center;
+    justify-content: space-between;
 
-    .input-wrapper {
-      display: flex;
-      justify-content: space-between;
-
-      p {
-        margin-top: 7.5px;
-      }
-
-      .input--box {
-        width: 50% !important;
-        padding: 0 10px !important;
-        min-height: 30px;
-      }
+    p {
+      margin-top: 7.5px;
     }
 
-    .upper-link--left {
-      background-color: darkgrey;
-      margin-left: 10px;
-      height: 2px;
-      width: 7px;
+    .input--box {
+      width: 50% !important;
+      padding: 0 10px !important;
+      min-height: 30px;
     }
+  }
 
-    .upper-link--bottom {
-      background-color: darkgrey;
-      width: 2px;
-      height: 13px;
-      margin-left: 15px;
-      margin-bottom: 2px;
-    }
+  .upper-link--left {
+    background-color: darkgrey;
+    margin-left: 10px;
+    height: 2px;
+    width: 7px;
+  }
 
-    .lower-link--top {
-      background-color: darkgrey;
-      width: 2px;
-      height: 13px;
-      margin-left: 15px;
-      margin-top: 2px;
-    }
+  .upper-link--bottom {
+    background-color: darkgrey;
+    width: 2px;
+    height: 13px;
+    margin-left: 15px;
+    margin-bottom: 2px;
+  }
 
-    .lower-link--left {
-      background-color: darkgrey;
-      margin-left: 10px;
-      height: 2px;
-      width: 7px;
-    }
+  .lower-link--top {
+    background-color: darkgrey;
+    width: 2px;
+    height: 13px;
+    margin-left: 15px;
+    margin-top: 2px;
+  }
 
-    .icon {
-      margin-left: 10px;
+  .lower-link--left {
+    background-color: darkgrey;
+    margin-left: 10px;
+    height: 2px;
+    width: 7px;
+  }
 
-      &:hover {
-        cursor: pointer;
-      }
+  .icon {
+    margin-left: 10px;
+
+    &:hover {
+      cursor: pointer;
     }
   }
 }

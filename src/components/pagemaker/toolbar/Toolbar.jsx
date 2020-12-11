@@ -2,14 +2,17 @@ import React from "react";
 import { Icon } from 'chayns-components/lib';
 import './toolbar.scss';
 
-const Toolbar =  () => (
+const Toolbar =  ({showConfig, setShowConfig}) => (
     <div className="toolbar--wrapper">
         <div className="option--wrapper">
             <div className="icon--wrapper">
                 <Icon icon="far fa-trash" />
             </div>
             <div className="icon--wrapper">
-                <Icon icon="far fa-arrows-v" />
+                <Icon
+                    icon="far fa-arrows-v"
+                    onClick={() => setShowConfig(!showConfig)}
+                />
             </div>
             <div className="icon--wrapper">
                 <Icon icon="far fa-clone" />
