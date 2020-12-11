@@ -1,0 +1,33 @@
+.toolbar--wrapper {
+  width: 200px;
+  height: 35px;
+  border: 1px solid darkgrey;
+  border-bottom: none;
+  margin-left: calc(100% - 200px);
+
+  .option--wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    .icon--wrapper {
+      margin-right: 20px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      .react-chayns-icon {
+        font-size: 20px;
+        color: #9ca0a6;
+        margin-top: 20%;
+
+        &:hover {
+          color: var(--chayns-color--headline);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
