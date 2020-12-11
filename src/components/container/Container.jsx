@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ResizePanel from "react-resize-panel";
 import useResizeObserver from "use-resize-observer";
 import Configuration from "../configuration/Configuration";
@@ -16,6 +16,7 @@ const Container = () => {
             <div
                 onMouseEnter={() => setShowToolbar(true)}
                 onMouseLeave={() => setShowToolbar(false)}
+                style={{ height: '100%' }}
             >
                 <div style={showToolbar ? { display: 'block' } : { display: 'block' }} >
                     <Toolbar showConfig={showConfig} setShowConfig={setShowConfig} />
