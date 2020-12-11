@@ -11,6 +11,7 @@ const Toolbar =  ({showConfig, setShowConfig}) => (
             <div className="icon--wrapper">
                 <Icon
                     icon="far fa-arrows-v"
+                    style={showConfig ? { color: 'var(--chayns-color--headline)' } : null}
                     onClick={() => setShowConfig(!showConfig)}
                 />
             </div>
