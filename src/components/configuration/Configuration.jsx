@@ -6,7 +6,7 @@ import './configuration.scss';
 
 const Configuration = ({currentHeight}) => {
 
-    const [desktopHeight, setDesktopHeight] = useState(0)
+    const [desktopHeight, setDesktopHeight] = useState(0);
     const [mobileHeight, setMobileHeight] = useState(0);
     const [isLocked, setIsLocked] = useState(true);
 

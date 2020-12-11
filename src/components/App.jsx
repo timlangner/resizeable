@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import Container from "./container/Container";
-
 import './app.scss';
 
 const App = () => {
