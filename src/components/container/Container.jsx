@@ -7,13 +7,11 @@ import './container.scss';
 
 const Container = () => {
     const { ref, height } = useResizeObserver();
-    const [containerHeight] = useState(200);
+    const [containerHeight] = useState(170);
 
     return (
         <>
-            <div
-                style={{ height: '100%' }}
-            >
+            <div style={{ height: '100%' }}>
                 <Toolbar />
                 <ResizePanel
                     direction='s'
@@ -30,9 +28,16 @@ const Container = () => {
                 </ResizePanel>
                 <div className="config--wrapper" style={height > 120 ? { display: 'none' } : null}>
                     <Configuration currentHeight={height} />
+                    <div style={{ position: 'absolute', width: '90%' }}>
+                        <h1 style={{ marginTop: '10px' }}>Schreibweisen</h1>
+                        <p>Zu einem ordentlichen Markenauftritt gehört nicht nur ein stimmiges Corporate Design, sondern auch ein einheitlicher Sprachgebrauch.</p>
+                    </div>
+                </div>
+                <div style={height <= 120 ? { display: 'none' } : null}>
+                    <h1 style={{ marginTop: '10px' }}>Schreibweisen</h1>
+                    <p>Zu einem ordentlichen Markenauftritt gehört nicht nur ein stimmiges Corporate Design, sondern auch ein einheitlicher Sprachgebrauch.</p>
                 </div>
             </div>
-            <br />
         </>
     );
 };
