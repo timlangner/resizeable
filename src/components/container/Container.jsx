@@ -15,7 +15,11 @@ const Container = () => {
                 style={{ height: '100%' }}
             >
                 <Toolbar />
-                <ResizePanel direction='s' handleClass="customHandle" style={{ height: containerHeight, border: '1px solid darkgrey' }}>
+                <ResizePanel
+                    direction='s'
+                    handleClass="customHandle"
+                    style={{ height: containerHeight, border: '1px solid darkgrey' }}
+                >
                     <div ref={ref} style={{height: '100%', display: 'flex', justifyContent: 'center'}} >
                         <div style={height <= 120 ? { display: 'none' } : null}>
                             <div style={{ marginTop: `${height - 145}px` }}>
