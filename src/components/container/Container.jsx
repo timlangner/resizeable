@@ -7,7 +7,7 @@ import './container.scss';
 
 const Container = () => {
     const { ref, height } = useResizeObserver();
-    const [containerHeight] = useState(170);
+    const [containerHeight] = useState(175);
 
     return (
         <>
