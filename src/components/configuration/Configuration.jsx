@@ -11,7 +11,7 @@ const Configuration = ({currentHeight, position}) => {
     const [isLocked, setIsLocked] = useState(true);
 
     useEffect(() => {
-        chayns.env.isDesktop ? setDesktopHeight(currentHeight) : setMobileHeight(currentHeight);
+        chayns.env.isDesktop ? setDesktopHeight(currentHeight) : setMobileHeight((currentHeight / 3).toFixed(0));
     }, [currentHeight]);
 
     useEffect(() => {
