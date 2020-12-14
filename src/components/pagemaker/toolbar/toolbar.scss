@@ -1,9 +1,9 @@
 .toolbar--wrapper {
-  width: 170px;
-  height: 40px;
+  width: 140px;
+  height: 30px;
   border: 1px solid darkgrey;
   border-bottom: none;
-  margin-left: calc(100% - 170px);
+  margin-left: calc(100% - 140px);
 
   .option--wrapper {
     display: flex;
@@ -19,7 +19,7 @@
       }
 
       .react-chayns-icon {
-        font-size: 20px;
+        font-size: 15px;
         color: #9ca0a6;
         margin-top: 20%;
 
