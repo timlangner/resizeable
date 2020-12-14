@@ -76,7 +76,7 @@ const Configuration = ({currentHeight, position}) => {
                             setIsLocked(!isLocked);
                         }}
                     >
-                        <FontAwesomeIcon icon={isLocked ? faLock : faUnlock} />
+                        <FontAwesomeIcon icon={isLocked ? faLock : faUnlock} style={{ width: '8px' }}/>
                     </div>
                     <div>
                         <div className="lower-link--top" />
