@@ -4,17 +4,17 @@
   background-color: white;
   padding: 10px;
   margin-top: 40px;
-  box-shadow: 0px 0px 8px 1px #b0b0b0;
+  box-shadow: 0 0 8px 1px #b0b0b0;
   z-index: 100;
   position: relative;
 
   &:before {
     content:"";
     position: absolute;
-    height: 0px;
-    width: 0px;
+    height: 0;
+    width: 0;
     left: 111px;
-    top: -29px; /* 1px buffer for zooming problems while rendering*/
+    top: -29px; /* 1px buffer for zooming problems while rendering */
     border-width: 15px;
     border-color: transparent transparent white transparent;
     border-style: solid;
@@ -27,15 +27,15 @@
   background-color: white;
   padding: 10px;
   margin-top: 40px;
-  box-shadow: 0px 0px 8px 1px #b0b0b0;
+  box-shadow: 0 0 8px 1px #b0b0b0;
   z-index: 100;
   position: relative;
 
   &:before {
     content:"";
     position: absolute;
-    height: 0px;
-    width: 0px;
+    height: 0;
+    width: 0;
     left: 111px;
     top: -29px; /* 1px buffer for zooming problems while rendering*/
     border-width: 15px;
@@ -49,15 +49,15 @@
   height: 105px;
   background-color: white;
   padding: 10px;
-  box-shadow: 0px 0px 8px 1px #b0b0b0;
+  box-shadow: 0 0 8px 1px #b0b0b0;
   z-index: 100;
   position: relative;
 
   &:before {
     content:"";
     position: absolute;
-    height: 0px;
-    width: 0px;
+    height: 0;
+    width: 0;
     left: 111px;
     bottom: -29px; /* 1px buffer for zooming problems while rendering*/
     border-width: 15px;
@@ -71,15 +71,15 @@
   height: 105px;
   background-color: white;
   padding: 10px;
-  box-shadow: 0px 0px 8px 1px #b0b0b0;
+  box-shadow: 0 0 8px 1px #b0b0b0;
   z-index: 100;
   position: relative;
 
   &:before {
     content:"";
     position: absolute;
-    height: 0px;
-    width: 0px;
+    height: 0;
+    width: 0;
     left: 111px;
     bottom: -29px; /* 1px buffer for zooming problems while rendering*/
     border-width: 15px;
@@ -110,22 +110,22 @@
   .upper-link--left {
     background-color: darkgrey;
     margin-left: 10px;
-    height: 2px;
-    width: 7px;
+    height: 1px;
+    width: 6px;
   }
 
   .upper-link--bottom {
     background-color: darkgrey;
-    width: 2px;
-    height: 13px;
+    width: 1px;
+    height: 12px;
     margin-left: 15px;
     margin-bottom: 2px;
   }
 
   .lower-link--top {
     background-color: darkgrey;
-    width: 2px;
-    height: 13px;
+    width: 1px;
+    height: 12px;
     margin-left: 15px;
     margin-top: 2px;
   }
@@ -133,12 +133,12 @@
   .lower-link--left {
     background-color: darkgrey;
     margin-left: 10px;
-    height: 2px;
-    width: 7px;
+    height: 1px;
+    width: 6px;
   }
 
   .icon {
-    margin-left: 10px;
+    margin-left: 11px;
 
     &:hover {
       cursor: pointer;
