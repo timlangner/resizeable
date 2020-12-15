@@ -15,10 +15,6 @@ const Container = () => {
         if (height && height > 0) setContainerHeight(height + 2);
     }, [height]);
 
-    useEffect(() => {
-        console.log(isActive);
-    }, [isActive]);
-
     return (
         <>
             <div style={{ height: '100%' }}>
