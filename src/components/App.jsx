@@ -1,21 +1,17 @@
 import React, {useState, useEffect} from 'react';
 import Container from "./container/Container";
 import './app.scss';
+import Toolbar from "./pagemaker/toolbar/Toolbar";
+import IntroHeadline from "./intro/IntroHeadline";
 
 const App = () => {
-    const [data, setData] = useState(null);
-
-    useEffect(() => {
-        chayns.getWindowMetrics().then((windowData) => {
-            setData(windowData);
-        });
-    }, []);
+    const [active, setActive] = useState(null);
 
     return (
         <div
             style={{ height: '100%' }}
         >
-            <h1>chayns® Design Guide</h1>
+            <IntroHeadline active={active} setActive={setActive} />
             <p style={{ marginTop: '10px' }}>Dieser Design Guide ist das zentrale Element der Identität und prägt das visuelle Erscheinungsbild und die Usability von chayns®. Dies zeichnet sich durch den konsequenten Einsatz und das optimale Zusammenspiel der Basiselemente wie Farbe, Typografie und Layout aus. </p>
             <div style={{ textAlign: 'center', marginBottom: '-30px' }}>
                 <img
