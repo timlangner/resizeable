@@ -6,7 +6,7 @@ const IntroHeadline = ({active, setActive}) => {
         <div
             onMouseOver={() => setActive(0)}
             onMouseLeave={() => setActive(null)}
-            style={active === 0 ? { marginTop: 0 } : { marginTop: '30px' }}
+            // style={active === 0 ? { marginTop: 0 } : { marginTop: '30px' }}
         >
             {
                 active === 0 ? (
