@@ -11,7 +11,7 @@ const App = () => {
         <div
             style={{ height: '100%' }}
         >
-            <IntroHeadline active={active} setActive={setActive} />
+            <IntroHeadline active={false} setActive={setActive} />
             <p style={{ marginTop: '10px' }}>Dieser Design Guide ist das zentrale Element der Identität und prägt das visuelle Erscheinungsbild und die Usability von chayns®. Dies zeichnet sich durch den konsequenten Einsatz und das optimale Zusammenspiel der Basiselemente wie Farbe, Typografie und Layout aus. </p>
             <div style={{ textAlign: 'center', marginBottom: '-30px' }}>
                 <img
