@@ -37,7 +37,6 @@
         "@reduxjs/toolkit": "^1.4.0",
         "bowser": "^2.9.0",
         "chayns-components": "^4.20.6",
-        "chayns-logger": "^2.8.5",
         "core-js": "^3.6.5",
         "prop-types": "^15.7.2",
         "react": "^16.13.1",
