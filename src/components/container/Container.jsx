@@ -8,8 +8,14 @@ import './container.scss';
 const Container = () => {
     const { ref, height } = useResizeObserver();
     const [containerHeight, setContainerHeight] = useState(175);
-    const [isActive, setIsActive] = useState(false);
+    const [isActive, setIsActive] = useState(true);
     const [isMouseDown, setIsMouseDown] = useState(false);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setIsActive(false);
+        }, 100);
+    }, []);
 
     useEffect(() => {
         if (height) setContainerHeight(height + 2);
@@ -22,7 +28,9 @@ const Container = () => {
                 <div
                     style={!isActive ? { height: containerHeight + 40 } : null }
                     onMouseOver={() => {
-                        setIsActive(true);
+                        setTimeout(() => {
+                            setIsActive(true);
+                        }, 75);
                     }}
                 />
                 {/*Resizeable Div*/}
@@ -35,7 +43,9 @@ const Container = () => {
                     onMouseUp={() => setIsMouseDown(false)}
                     onMouseLeave={() => {
                         if (!isMouseDown) {
-                            setIsActive(false);
+                            setTimeout(() => {
+                                setIsActive(false);
+                            }, 75);
                         }
                     }}
                 >
