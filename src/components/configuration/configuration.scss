@@ -1,10 +1,12 @@
 .container {
   width: 250px;
-  height: 105px;
+  height: 110px;
   background-color: white;
-  padding: 10px;
   margin-top: 40px;
-  box-shadow: 0 0 8px 1px #b0b0b0;
+  padding: 12px;
+  box-shadow: 3px 1px 8px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 2px;
   z-index: 100;
   position: relative;
 
@@ -23,11 +25,13 @@
 
 .container--mobile {
   width: 250px;
-  height: 105px;
+  height: 110px;
   background-color: white;
-  padding: 10px;
   margin-top: 40px;
-  box-shadow: 0 0 8px 1px #b0b0b0;
+  padding: 12px;
+  box-shadow: 3px 1px 8px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 2px;
   z-index: 100;
   position: relative;
 
@@ -46,10 +50,12 @@
 
 .container-inside {
   width: 250px;
-  height: 105px;
+  height: 110px;
   background-color: white;
-  padding: 10px;
-  box-shadow: 0 0 8px 1px #b0b0b0;
+  padding: 12px;
+  box-shadow: 3px 1px 8px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 2px;
   z-index: 100;
   position: relative;
 
@@ -68,10 +74,12 @@
 
 .container-inside--mobile {
   width: 250px;
-  height: 105px;
+  height: 110px;
   background-color: white;
-  padding: 10px;
-  box-shadow: 0 0 8px 1px #b0b0b0;
+  padding: 12px;
+  box-shadow: 3px 1px 8px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 2px;
   z-index: 100;
   position: relative;
 
