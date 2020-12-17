@@ -1,7 +1,7 @@
 {
-    "name": "chayns-template",
+    "name": "chayns-resizeable",
     "version": "1.0.0",
-    "description": "A template for creating chayns pages and several other plugins.",
+    "description": "A resizeable empty Element for the chayns pagemaker",
     "author": "Tim Langner",
     "main": "src/index.jsx",
     "scripts": {
