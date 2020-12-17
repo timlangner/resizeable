@@ -59,15 +59,15 @@ const Container = () => {
                             ref={ref}
                             style={{height: '100%', display: 'flex', justifyContent: 'center', backgroundColor: '#e7e7e7'}}
                         >
-                            <div style={height <= 120 ? { display: 'none' } : null}>
+                            <div style={height <= 130 ? { display: 'none' } : null}>
                                 <div style={{ marginTop: `${height - 145}px` }}>
                                     <Configuration currentHeight={height} position={"inside"} />
                                 </div>
                             </div>
                         </div>
                     </ResizePanel>
-                    <div style={height > 120 ? { height: '10px'} : null} />
-                    <div className="config--wrapper" style={height > 120 ? { display: 'none' } : null}>
+                    <div style={height > 130 ? { height: '10px'} : null} />
+                    <div className="config--wrapper" style={height > 130 ? { display: 'none' } : null}>
                         <Configuration currentHeight={height} />
                         <div style={chayns.env.isDesktop ? { position: 'absolute', width: '90%' } : { position: 'absolute', width: '96.5%' }}>
                             <h1 style={{ marginTop: '20px' }}>Schreibweisen</h1>
@@ -75,7 +75,7 @@ const Container = () => {
                         </div>
                     </div>
                 </div>
-                <div style={!isActive ? null : height <= 120 ? { display: 'none' } : null}>
+                <div style={!isActive ? null : height <= 130 ? { display: 'none' } : null}>
                     <h1 style={{ marginTop: '10px' }}>Schreibweisen</h1>
                     <p>Zu einem ordentlichen Markenauftritt gehört nicht nur ein stimmiges Corporate Design, sondern auch ein einheitlicher Sprachgebrauch.</p>
                 </div>
